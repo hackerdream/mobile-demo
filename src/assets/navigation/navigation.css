@@ -1,0 +1,131 @@
+
+#header-bar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 46px;
+    top: 0;
+    height: 46px;
+    width: 100%;
+    background-color: #cccccc;
+
+}
+
+.title {
+    padding-left: 10px;
+}
+
+.nav-menu-icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    background-color: #222;
+    background-size: 34px;
+    border-radius: 4px;
+
+}
+
+.menu {
+    position: fixed;
+    width: 120px;
+    height: 100%;
+    top: 0;
+    right: -120px;
+    z-index: 1000;
+    background: #7ACEF4;
+}
+
+.menu-hide {
+    animation: menuHide 0.3s;
+    -webkit-animation: menuHide 0.3s;
+    -moz-animation: menuHide 0.3s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.menu-show {
+    animation: menuShow 0.3s;
+    -webkit-animation: menuShow 0.3s;
+    -moz-animation: menuShow 0.3s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes menuHide {
+    0% {
+        right: 0
+    }
+    100% {
+        right: -120px
+    }
+}
+
+@keyframes menuShow {
+    0% {
+        right: -120px
+    }
+    100% {
+        right: 0
+    }
+}
+
+@-webkit-keyframes menuHide {
+    0% {
+        right: 0
+    }
+    100% {
+        right: -120px
+    }
+}
+
+@-webkit-keyframes menuShow {
+    0% {
+        right: -120px
+    }
+    100% {
+        right: 0
+    }
+}
+
+@-moz-keyframes menuHide {
+    0% {
+        right: 0
+    }
+    100% {
+        right: -120px
+    }
+}
+
+@-moz-keyframes menuShow {
+    0% {
+        right: -120px
+    }
+    100% {
+        right: 0
+    }
+}
+
+.menu-item {
+    height: 40px;
+    border-bottom: #cccccc 1px solid;
+}
+
+.menu-mask {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    display: none;
+    z-index: 500;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu > ul > li {
+    padding: 10px 20px;
+    font-size: 1.6em;
+}
